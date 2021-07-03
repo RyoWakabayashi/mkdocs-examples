@@ -1,0 +1,24 @@
+---
+site_name: "MkDocs examples"
+site_url: ""
+repo_url: https://github.com/RyoWakabayashi/mkdocs-examples/
+use_directory_urls: false
+theme:
+  name: "bootstrap"
+extra:
+  search:
+    language: "ja"
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format:
+            !!python/name:pymdownx.superfences.fence_div_format # yamllint disable-line
+
+
+extra_css:
+  - https://unpkg.com/mermaid@8.11.0/dist/mermaid.css
+extra_javascript:
+  - https://unpkg.com/mermaid@8.11.0/dist/mermaid.min.js
+dev_addr: "0.0.0.0:8000"
