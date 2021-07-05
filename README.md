@@ -6,12 +6,14 @@ MkDocs の使用例
 
 - Node.js 16.4.1
 - Python 3.9.6
+- Yarn 1.22.10
 
 asdf がある場合、以下のコマンドでインストール可能
 
 ```bash
 asdf plugin-add nodejs \
     ; asdf plugin-add python \
+    ; asdf plugin-add yarn \
     && asdf install
 ```
 
@@ -20,7 +22,7 @@ asdf plugin-add nodejs \
 ### 依存パッケージのインストール
 
 ```bash
-npm install \
+yarn \
     && pip install --requirement requirements.txt
 ```
 
