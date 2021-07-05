@@ -2,13 +2,45 @@
 site_name: "MkDocs examples"
 site_url: ""
 repo_url: https://github.com/RyoWakabayashi/mkdocs-examples/
+edit_uri: ""
 use_directory_urls: false
 theme:
-  name: "bootstrap"
+  name: "material"
+  feature:
+    tabs: true
+plugins:
+  - search
+  - table-reader:
+      data_path: "docs"
+  - pdf-with-js
 extra:
   search:
     language: "ja"
+nav:
+  - Home: "index.md"
+  - 作図:
+      - PlantUML:
+          - シーケンス図: plantUML/sequence.md
+          - ユースケース図: plantUML/usecase.md
+      - Mermeid:
+          - フローチャート: mermaid/graph.md
+          - シーケンス図: mermaid/sequence.md
+          - クラス図: mermaid/class.md
+          - 状態遷移図: mermaid/state.md
+          - ER図: mermaid/er.md
+          - ガントチャート: mermaid/gantt.md
+  - テーブル:
+      - CSV読込: table/csv.md
+  - コード:
+      - ハイライト: code/hilite.md
 markdown_extensions:
+  - codehilite:
+      linenums: true
+      guess_lang: false
+      use_pygments: false
+      noclasses: true
+  - plantuml_markdown:
+      server: http://www.plantuml.com/plantuml
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -17,8 +49,6 @@ markdown_extensions:
             !!python/name:pymdownx.superfences.fence_div_format # yamllint disable-line
 
 
-extra_css:
-  - https://unpkg.com/mermaid@8.11.0/dist/mermaid.css
 extra_javascript:
   - https://unpkg.com/mermaid@8.11.0/dist/mermaid.min.js
 dev_addr: "0.0.0.0:8000"
