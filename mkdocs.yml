@@ -22,6 +22,14 @@ nav:
       - PlantUML:
           - シーケンス図: plantUML/sequence.md
           - ユースケース図: plantUML/usecase.md
+          - クラス図: plantUML/class.md
+          - 状態遷移図: plantUML/state.md
+          - JSON: plantUML/json.md
+          - YAML: plantUML/yaml.md
+          - ネットワーク図: plantUML/nw.md
+          - GUI設計: plantUML/gui.md
+          - アーキテクチャ図: plantUML/architecture.md
+          - ガントチャート: plantUML/gantt.md
       - Mermeid:
           - フローチャート: mermaid/graph.md
           - シーケンス図: mermaid/sequence.md
